@@ -19,6 +19,7 @@ async function run() {
         const productCollection = client.db("eCarManufacturer").collection("manufacturer");
         const userCollection = client.db('eCarManufacturer').collection('infos');
 
+        //function for jwt
         function verifyJWT(req, res, next) {
             const authHeader = req.headers.authorization;
             if (!authHeader) {
