@@ -33,6 +33,12 @@ async function run() {
                 req.decoded = decoded;
                 next();
             });
+            app.get('/product', async (req, res) => {
+                const query = {};
+                const cursor = productCollection.find(query);
+                const products = await cursor.toArray();
+                res.send(products);
+            })
 
         }
 
