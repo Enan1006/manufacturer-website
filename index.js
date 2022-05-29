@@ -58,6 +58,12 @@ async function run() {
                 const product = await productCollection.deleteOne(query);
                 res.send(product)
             });
+            //load all  user
+            //  app.get('/user', verifyJWT, async (req, res) => {
+            app.get('/user', async (req, res) => {
+                const users = await userCollection.find().toArray();
+                res.send(users);
+            });
 
         }
 
