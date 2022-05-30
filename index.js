@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 const corsConfig = {
-    origin: 'https://serene-ridge-16672.herokuapp.com',
+    origin: 'https://e-car-manufacturer.web.app',
 }
 app.use(cors(corsConfig))
 app.use(express.json());
